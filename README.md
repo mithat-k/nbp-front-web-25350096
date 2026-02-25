@@ -1,2 +1,8 @@
-# nbp-front-web-25350096
-this repo for my frontend lesson
+\# what is repo's purpose?
+
+
+
+this repo is created for my leson nbp 124 frontend uı design and programming
+
+
+

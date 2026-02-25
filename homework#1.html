@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Osmanlı Şerbetleri - Wikipedia Entegrasyonu</title>
+    <style>
+        /* CSS Değişkenleri - Dökümandaki :root kullanımı [cite: 40, 41] */
+        :root {
+            --primary-gold: #c5a059;
+            --rose-red: #b31b1b;
+            --bg-parchment: #fdfaf5;
+            --text-dark: #2c1e1e;
+            --transition: 0.3s ease-in-out;
+        }
+
+        body {
+            background-color: var(--bg-parchment);
+            font-family: 'Segoe UI', serif;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+
+        /* Çocuk Seçici: Doğrudan .container altındaki kartlar [cite: 7, 88] */
+        .serbet-container > .card {
+            background: white;
+            width: 450px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 6px solid transparent;
+        }
+
+        /* Modern :has() Seçicisi: İçinde 'highlight' olanı belirginleştir [cite: 34, 35] */
+        .card:has(.highlight) {
+            border-left-color: var(--primary-gold);
+            background-color: #fffcf5;
+        }
+
+        /* Bitişik Kardeş Seçici: Başlıktan hemen sonraki açıklama [cite: 7, 100] */
+        h2 + p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Öznitelik Seçici: target="_blank" olan linkleri BUTON yap [cite: 12, 109] */
+        a[target="_blank"] {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: var(--rose-red);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        a[target="_blank"]:hover {
+            background-color: var(--primary-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Yapısal Sözde Sınıf: Zebra görünümü [cite: 24, 25] */
+        .card:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sarayın Şifalı Şerbetleri</h1>
+
+    <div class="serbet-container">
+        
+        <div class="card">
+            <span class="highlight">Saray Favorisi</span>
+            <h2>Demirhindi Şerbeti</h2>
+            <p>Osmanlı mutfağının en kompleks ve şifalı içeceklerinden biri.</p>
+            <a href="https://tr.wikipedia.org/wiki/Demirhindi_%C5%9Ferbeti" target="_blank">Wikipedia'da İncele</a>
+        </div>
+
+        <div class="card">
+            <h2>Gül Şerbeti</h2>
+            <p>Hafifliği ve hoş kokusuyla iftar sofralarının vazgeçilmezi.</p>
+            <a href="https://tr.wikipedia.org/wiki/G%C3%BCl_%C5%9Ferbeti" target="_blank">Wikipedia'da İncele</a>
+        </div>
+
+        <div class="card">
+            <h2>Reyhan Şerbeti</h2>
+            <p>Kendine has mor rengiyle modern sofralarda yeniden hayat buluyor.</p>
+            <a href="https://tr.wikipedia.org/wiki/Reyhan_%C5%9Ferbeti" target="_blank">Wikipedia'da İncele</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
