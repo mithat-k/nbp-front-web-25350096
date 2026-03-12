@@ -1,10 +1,6 @@
-
-
-\# what is repo's purpose?
-
+\# What is this repo's purpose?
 
 
 
-
-this repo is created for my leson nbp 124 frontend uı design and programming
+This repo is created for my lesson NBP 124 Frontend UI Design and Programming.
 
